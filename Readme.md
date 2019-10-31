@@ -1,5 +1,7 @@
 SCRIPTBEST VERSIONE 7.3.4
+
 Attenzione!
+
 ScriptBest non è responsabile di eventuali ban o problemi derivanti dall'uso del bot. Pertanto utilizzandolo
 ti prendi la responsabilità di eventuali rischi.
 
