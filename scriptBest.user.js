@@ -1,5 +1,5 @@
 // ==UserScript==
-// @version 7.3.4
+// @version 7.3.6
 // @name scriptBest
 // @description OGame: Miglioramento giocabilità con funzioni automatiche e di controllo
 // @author info@tryus.it
