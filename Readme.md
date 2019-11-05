@@ -1,11 +1,19 @@
-SCRIPTBEST VERSIONE 7.3.6
+SCRIPTBEST VERSIONE 7.3.7
+
+Home: https://scriptog.tryus.it
+
+Facebook: https://www.facebook.com/scriptOgame
+
+Youtute: https://www.youtube.com/channel/UC-JNcNJzWKs_JznrZQITqRw
+
+User manual: https://scriptog.tryus.it/document/manuale-d'uso.php
+
+Email Info@tryus.it
 
 Attenzione!
 
 ScriptBest non è responsabile di eventuali ban o problemi derivanti dall'uso del bot. Pertanto utilizzandolo
 ti prendi la responsabilità di eventuali rischi.
-
-Server supportati: IT, EN, ES, FR, DE
 
 Per supportare altri server dobbiamo tradurre queste stringhe:
 Send
@@ -28,5 +36,6 @@ https://scriptog.tryus.it/document/manuale-d'uso.php
 
 Contatti:
 info@tryus.it
+
 
 
