@@ -1,4 +1,4 @@
-SCRIPTBEST VERSIONE 7.3.8
+SCRIPTBEST VERSIONE 7.4.3
 
 Home: https://scriptog.tryus.it
 
@@ -15,14 +15,9 @@ Attenzione!
 ScriptBest non è responsabile di eventuali ban o problemi derivanti dall'uso del bot. Pertanto utilizzandolo
 ti prendi la responsabilità di eventuali rischi.
 
-Per supportare altri server dobbiamo tradurre queste stringhe:
-Send
-An error has occurred
-no ships
-no free fleet
-Missile Attack
-Result of expedition
-  
+Server supportati: IT, EN, US, ES, AR, MX, FR, DE, PT, BR, DK, BA, CZ, FI, NL, GR, NO, RO, RU, SE, SI, SK, HU
+Versione ogame: 6.x, 7.x
+
 Aiutaci inviando le stringhe all'email info@tryus.it
 
 
