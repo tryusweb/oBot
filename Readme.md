@@ -1,4 +1,4 @@
-SCRIPTBEST VERSIONE 7.4.3
+SCRIPTBEST VERSIONE 7.5
 
 Home: https://scriptog.tryus.it
 
