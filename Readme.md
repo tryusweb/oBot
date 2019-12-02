@@ -6,7 +6,7 @@ Facebook: https://www.facebook.com/scriptOgame
 
 Youtute: https://www.youtube.com/channel/UC-JNcNJzWKs_JznrZQITqRw
 
-User manual: https://scriptog.tryus.it/document/manuale-d'uso.php
+User manual: https://scriptog.tryus.it/manual
 
 Email Info@tryus.it
 
