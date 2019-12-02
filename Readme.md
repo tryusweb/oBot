@@ -27,7 +27,7 @@ Sito ufficiale:
 https://scriptog.tryus.it
 
 Manuale/documentazione:
-https://scriptog.tryus.it/document/manuale-d'uso.php
+https://scriptog.tryus.it/manual
 
 Contatti:
 info@tryus.it
