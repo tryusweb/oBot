@@ -1,4 +1,4 @@
-Version: 7.5.5
+Version: 7.5.8
 Link Download: https://scriptog.tryus.it/jsBot/scriptBest.user.js
 Compatibility ogame version: 6.x,7.x
 Home: https://scriptog.tryus.it
