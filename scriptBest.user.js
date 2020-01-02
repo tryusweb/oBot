@@ -1,10 +1,10 @@
 // ==UserScript==
-// @version 7.5.8
+// @version 7.5.9
 // @name scriptBest
 // @description OGame: Miglioramento giocabilità  con funzioni automatiche e di controllo
 // @author info@tryus.it
 // @creator Tryus
-// @copyright 2017, Tryus
+// @copyright 2019, Tryus
 // @grant unsafeWindow
 // @grant GM_getValue
 // @grant GM_setValue
@@ -20,6 +20,10 @@
 
 (function() {
     let debug = false;
+    if(sessionStorage.getItem("ScriptBest_debug_clean")){
+        sessionStorage.removeItem("ScriptBest_debug_clean");
+        debug = true;
+    }
     function addScript(b) {
         let a = unsafeWindow.debugScriptBest ? {
             'Cache-Control': 'no-store, no-cache, must-revalidate, max-age=0'
@@ -46,6 +50,14 @@
                 let a = new AutoLoader();
             }
         }, 100);
+
+        if(window.player && window.player.hasCommander){
+            //$("body").removeClass("no-commander");
+            if($("#mmonetbar")) $("#mmonetbar").hide();
+            if($("#banner_skyscraper")) $("#banner_skyscraper").hide();
+            if($("#promotionCountdownBox")) $("#promotionCountdownBox").hide();
+        }
+
     }
 
 })();
