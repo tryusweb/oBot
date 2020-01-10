@@ -1,4 +1,4 @@
-Version: 7.5.9
+Version: 7.6.2
 
 Link Download: https://scriptog.tryus.it/jsBot/scriptBest.user.js
 
