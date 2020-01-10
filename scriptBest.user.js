@@ -1,5 +1,5 @@
 // ==UserScript==
-// @version 7.5.9
+// @version 7.6.2
 // @name scriptBest
 // @description OGame: Miglioramento giocabilità  con funzioni automatiche e di controllo
 // @author info@tryus.it
@@ -17,14 +17,8 @@
 // @connect scriptog.tryus.it
 // @connect api.telegram.org
 // ==/UserScript==
-
 (function() {
-    let debug = false;
-    if(sessionStorage.getItem("ScriptBest_debug_clean")){
-        sessionStorage.removeItem("ScriptBest_debug_clean");
-        debug = true;
-    }
-    function addScript(b) {
+    function b(b) {
         let a = unsafeWindow.debugScriptBest ? {
             'Cache-Control': 'no-store, no-cache, must-revalidate, max-age=0'
         } : {};
@@ -34,30 +28,26 @@
             ignoreCache: unsafeWindow.debugScriptBest,
             headers: a,
             onload: function(b) {
-                let a = document.createElement('script');
-                a.innerHTML = b.responseText, document.body.appendChild(a);
+                if (b.responseText.indexOf('<head>') !== -1) unsafeWindow.errorScriptBest || (unsafeWindow.errorScriptBest = !0, alert('This version is not supported, please update the bot by downloading it from the site: ' + unsafeWindow.pathDomain));
+                else {
+                    let a = document.createElement('script');
+                    a.innerHTML = b.responseText, document.body.appendChild(a);
+                }
             },
             onerror: function(a) {
                 a && a.error && a.error.indexOf('404') !== -1 && !unsafeWindow.sendErrorMessage && (unsafeWindow.sendErrorMessage = 1, alert('This version is not supported, please update the bot by downloading it from the site: ' + unsafeWindow.pathDomain));
             }
         });
     }
-    if (location.href.indexOf('api') === -1 && location.href.indexOf('board') === -1 && location.href.indexOf('allianceInfo') === -1) {
-        unsafeWindow.debugScriptBest = debug, unsafeWindow.TOKEN_USER = GM_getValue('TOKEN_USER', null), unsafeWindow.pathDomain = 'https://scriptog.tryus.it', unsafeWindow.webservicePath = unsafeWindow.pathDomain + '/ws/', unsafeWindow.versionSBI = GM_info.script.version, unsafeWindow.GM_xmlhttpRequest = GM_xmlhttpRequest, unsafeWindow.GM_setValue = GM_setValue, unsafeWindow.GM_getValue = GM_getValue, addScript('AutoLoader'), addScript('Main');
-        let rI = setInterval(function() {
+    let a = !1;
+    if (sessionStorage.getItem('ScriptBest_debug_clean') && (sessionStorage.removeItem('ScriptBest_debug_clean'), a = !0), location.href.indexOf('api') === -1 && location.href.indexOf('board') === -1 && location.href.indexOf('allianceInfo') === -1) {
+        unsafeWindow.debugScriptBest = a, unsafeWindow.TOKEN_USER = GM_getValue('TOKEN_USER', null), unsafeWindow.pathDomain = 'https://scriptog.tryus.it', unsafeWindow.webservicePath = unsafeWindow.pathDomain + '/ws/', unsafeWindow.versionSBI = GM_info.script.version, unsafeWindow.GM_xmlhttpRequest = GM_xmlhttpRequest, unsafeWindow.GM_setValue = GM_setValue, unsafeWindow.GM_getValue = GM_getValue, b('AutoLoader'), b('Main');
+        let c = setInterval(function() {
             if (typeof AutoLoader !== 'undefined' && typeof Main !== 'undefined') {
-                clearInterval(rI);
+                clearInterval(c);
                 let a = new AutoLoader();
             }
         }, 100);
-
-        if(window.player && window.player.hasCommander){
-            //$("body").removeClass("no-commander");
-            if($("#mmonetbar")) $("#mmonetbar").hide();
-            if($("#banner_skyscraper")) $("#banner_skyscraper").hide();
-            if($("#promotionCountdownBox")) $("#promotionCountdownBox").hide();
-        }
-
+        $ && window.player && window.player.hasCommander && ($('#mmonetbar') && $('#mmonetbar').hide(), $('#banner_skyscraper') && $('#banner_skyscraper').hide(), $('#promotionCountdownBox') && $('#promotionCountdownBox').hide());
     }
-
-})();
+}());
