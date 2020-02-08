@@ -6,7 +6,7 @@ Compatibility ogame version: 6.x,7.x
 
 Home: https://scriptog.tryus.it
 
-Facebook: https://www.facebook.com/scriptOgame
+Facebook: https://www.facebook.com/oBot.it
 
 Youtute: https://www.youtube.com/channel/UC-JNcNJzWKs_JznrZQITqRw
 
