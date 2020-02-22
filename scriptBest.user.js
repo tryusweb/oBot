@@ -1,5 +1,5 @@
 // ==UserScript==
-// @version 7.6.6
+// @version 7.6.5
 // @name oBot
 // @description OGame: Miglioramento giocabilità  con funzioni automatiche e di controllo
 // @author info@tryus.it
