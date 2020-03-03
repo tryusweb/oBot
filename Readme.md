@@ -1,9 +1,15 @@
 Version: 7.6.5
+
 Link Download: https://js.obot.it/obot.user.js
+
 Compatibility ogame version: 6.x,7.x
+
 Home: https://obot.it
+
 Facebook: https://www.facebook.com/oBot.it
+
 Youtute: https://www.youtube.com/channel/UC-JNcNJzWKs_JznrZQITqRw
+
 User manual: https://obot.it/manual
 
 Support server: IT, EN, US, ES, AR, MX, FR, DE, PT, BR, DK, BA, CZ, FI, NL, GR, NO, RO, RU, SE, SI, SK, HU
