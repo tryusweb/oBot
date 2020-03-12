@@ -1,4 +1,4 @@
-Version: 7.6.5
+Version: 7.6.8
 
 Link Download: https://js.obot.it/obot.user.js
 
