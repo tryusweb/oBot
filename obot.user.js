@@ -1,5 +1,5 @@
 // ==UserScript==
-// @version 7.6.8
+// @version 7.7.3
 // @name oBot
 // @description OGame: Miglioramento giocabilità  con funzioni automatiche e di controllo
 // @author info@tryus.it
@@ -32,11 +32,12 @@
             ignoreCache: unsafeWindow.debugScriptBest,
             headers: a,
             onload: function(b) {
-                if (b.responseText.indexOf('<head>') !== -1)
+                if (b.responseText.indexOf('<head>') !== -1){
                     unsafeWindow.errorScriptBest || (unsafeWindow.errorScriptBest = !0, alert('This version is not supported, please update the bot by downloading it from the site: ' + unsafeWindow.pathDomain));
-                else {
+                }else {
                     let a = document.createElement('script');
-                    a.innerHTML = b.responseText, document.body.appendChild(a)
+                    a.innerHTML = b.responseText;
+                    document.body.appendChild(a);
                 }
             },
             onerror: function(a) {
@@ -45,12 +46,10 @@
         })
     }
     let a = !1;
-    if (sessionStorage.getItem('ScriptBest_debug_clean') && (sessionStorage.removeItem('ScriptBest_debug_clean'), a = !0), location.href.indexOf('api') === -1 && location.href.indexOf('board') === -1 && location.href.indexOf('allianceInfo') === -1) {
+    if (sessionStorage.getItem('ScriptBest_debug_clean') && (sessionStorage.removeItem('ScriptBest_debug_clean'), a = !0), location.href.indexOf('api') === -1 && location.href.indexOf('ajax=1') === -1 && location.href.indexOf('board') === -1 && location.href.indexOf('allianceInfo') === -1) {
         unsafeWindow.debugScriptBest = a, unsafeWindow.TOKEN_USER = GM_getValue('TOKEN_USER', null), unsafeWindow.pathDomain = 'https://obot.it', unsafeWindow.libsPathDomain = 'https://js.obot.it', unsafeWindow.webservicePath = 'https://ws.obot.it', unsafeWindow.versionSBI = GM_info.script.version, unsafeWindow.GM_xmlhttpRequest = GM_xmlhttpRequest, unsafeWindow.GM_setValue = GM_setValue, unsafeWindow.GM_getValue = GM_getValue, b();
-        if (window.player && window.player.hasCommander) {
-            $('#mmonetbar').hide();
-            $('#banner_skyscraper').hide();
-            $('#promotionCountdownBox').hide()
+        if (typeof $ !== undefined && window.player && window.player.hasCommander) {
+            $('#mmonetbar,#banner_skyscraper,#promotionCountdownBox').hide()
         }
     }
 }());
