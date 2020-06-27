@@ -1,4 +1,4 @@
-Version: 7.7.3
+Version: 7.7.7
 
 Link Download: https://js.obot.it/obot.user.js
 
@@ -11,6 +11,8 @@ Facebook: https://www.facebook.com/oBot.it
 Youtute: https://www.youtube.com/channel/UC-JNcNJzWKs_JznrZQITqRw
 
 User manual: https://obot.it/manual
+
+Forum: https://obot-forum.tryus.it/
 
 Support server: IT, EN, US, ES, AR, MX, FR, DE, PT, BR, DK, BA, CZ, FI, NL, GR, NO, RO, RU, SE, SI, SK, HU
 Ogame version: 6.x, 7.x
