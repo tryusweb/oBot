@@ -1,5 +1,5 @@
 // ==UserScript==
-// @version 7.7.3
+// @version 7.7.7
 // @name oBot
 // @description OGame: Miglioramento giocabilità  con funzioni automatiche e di controllo
 // @author info@tryus.it
@@ -51,5 +51,12 @@
         if (typeof $ !== undefined && window.player && window.player.hasCommander) {
             $('#mmonetbar,#banner_skyscraper,#promotionCountdownBox').hide()
         }
+        if(!unsafeWindow.debugScriptBest){
+            setTimeout(function(){
+                if(!unsafeWindow.obotLoaded) location.reload();
+                else console.log("obotLoaded controlpass");
+            },1000*60*5);//5 m
+        }
     }
+
 }());
