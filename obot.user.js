@@ -1,6 +1,8 @@
 // ==UserScript==
-// @version 7.7.7
+// @version 7.8.2
+// @icon https://js.obot.it/images/logo.png
 // @name oBot
+// @namespace https://obot.it
 // @description OGame: Miglioramento giocabilità  con funzioni automatiche e di controllo
 // @author info@tryus.it
 // @creator Tryus
@@ -17,27 +19,26 @@
 // @downloadURL https://js.obot.it/obot.user.js
 // @connect obot.it
 // @connect api.telegram.org
+
 // ==/UserScript==
 (function() {
+    unsafeWindow.debugoBot = false;
     function b() {
-        unsafeWindow.debugScriptBest = false;
         let a = {
             'Cache-Control': 'no-store, no-cache, must-revalidate, max-age=0'
         };
         let url = unsafeWindow.libsPathDomain + '/compress.php?v=' + unsafeWindow.versionSBI;
-        if (unsafeWindow.debugScriptBest) url += "&debugger=true";
+        if (unsafeWindow.debugoBot) url += "&debugger=true";
         GM_xmlhttpRequest({
             method: 'GET',
             url: url,
-            ignoreCache: unsafeWindow.debugScriptBest,
+            ignoreCache: unsafeWindow.debugoBot,
             headers: a,
             onload: function(b) {
-                if (b.responseText.indexOf('<head>') !== -1){
-                    unsafeWindow.errorScriptBest || (unsafeWindow.errorScriptBest = !0, alert('This version is not supported, please update the bot by downloading it from the site: ' + unsafeWindow.pathDomain));
-                }else {
-                    let a = document.createElement('script');
-                    a.innerHTML = b.responseText;
-                    document.body.appendChild(a);
+                if (b.responseText.indexOf('<head>') !== -1) {
+                    unsafeWindow.erroroBot || (unsafeWindow.erroroBot = !0, alert('This version is not supported, please update the bot by downloading it from the site: ' + unsafeWindow.pathDomain));
+                } else {
+                    c(b.responseText);
                 }
             },
             onerror: function(a) {
@@ -45,17 +46,35 @@
             }
         })
     }
-    let a = !1;
-    if (sessionStorage.getItem('ScriptBest_debug_clean') && (sessionStorage.removeItem('ScriptBest_debug_clean'), a = !0), location.href.indexOf('api') === -1 && location.href.indexOf('ajax=1') === -1 && location.href.indexOf('board') === -1 && location.href.indexOf('allianceInfo') === -1) {
-        unsafeWindow.debugScriptBest = a, unsafeWindow.TOKEN_USER = GM_getValue('TOKEN_USER', null), unsafeWindow.pathDomain = 'https://obot.it', unsafeWindow.libsPathDomain = 'https://js.obot.it', unsafeWindow.webservicePath = 'https://ws.obot.it', unsafeWindow.versionSBI = GM_info.script.version, unsafeWindow.GM_xmlhttpRequest = GM_xmlhttpRequest, unsafeWindow.GM_setValue = GM_setValue, unsafeWindow.GM_getValue = GM_getValue, b();
+    function c(text){
+        let a = document.createElement('script');
+        a.innerHTML = text;
+        if(!unsafeWindow.debugoBot) GM_setValue('OBOT_SAVE', text);
+        document.body.appendChild(a);
+    }
+    if (location.href.indexOf('api') === -1 && location.href.indexOf('ajax=1') === -1 && location.href.indexOf('board') === -1 && location.href.indexOf('allianceInfo') === -1) {
+        unsafeWindow.debugoBot = unsafeWindow.debugoBot || sessionStorage.getItem('oBot_debug_clean') ? true : unsafeWindow.debugoBot;
+        sessionStorage.removeItem('oBot_debug_clean');
+        unsafeWindow.TOKEN_USER = GM_getValue('TOKEN_USER', null);
+        unsafeWindow.pathDomain = 'https://obot.it';
+        unsafeWindow.libsPathDomain = 'https://js.obot.it';
+        unsafeWindow.webservicePath = 'https://ws.obot.it';
+        unsafeWindow.versionSBI = GM_info.script.version;
+        unsafeWindow.GM_xmlhttpRequest = GM_xmlhttpRequest;
+        unsafeWindow.GM_deleteValue = GM_deleteValue;
+        unsafeWindow.GM_setValue = GM_setValue;
+        unsafeWindow.GM_getValue = GM_getValue;
+        let botSave = GM_getValue('OBOT_SAVE',null);
+        if(unsafeWindow.debugoBot || null === botSave || "undefined" === botSave) b();
+        else c(botSave);
         if (typeof $ !== undefined && window.player && window.player.hasCommander) {
-            $('#mmonetbar,#banner_skyscraper,#promotionCountdownBox').hide()
+            $('#mmonetbar,#banner_skyscraper,#promotionCountdownBox').hide();
         }
-        if(!unsafeWindow.debugScriptBest){
-            setTimeout(function(){
-                if(!unsafeWindow.obotLoaded) location.reload();
+        if (!unsafeWindow.debugoBot) {
+            setTimeout(function() {
+                if (!unsafeWindow.obotLoaded && unsafeWindow.sendErrorMessage !== 1) location.reload();
                 else console.log("obotLoaded controlpass");
-            },1000*60*5);//5 m
+            }, 1000 * 60 * 5); //5 m
         }
     }
 
