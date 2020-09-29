@@ -1,4 +1,4 @@
-Version: 7.8.2
+Version: 7.8.4
 
 Link Download: https://js.obot.it/obot.user.js
 
@@ -17,7 +17,7 @@ Forum: https://obot-forum.tryus.it/
 Support server: IT, EN, US, ES, AR, MX, FR, DE, PT, BR, DK, BA, CZ, FI, NL, GR, NO, RO, RU, SE, SI, SK, HU
 Ogame version: 6.x, 7.x
 
-ScriptBest is a bot composed of various modules, which helps you keep an eye on your account. Integrated modules: 
+oBot is a bot composed of various modules, which helps you keep an eye on your account. Integrated modules: 
 •	Self activity; 
 •	Check attacks and spy on arrival; 
 •	Notification Telegram;
