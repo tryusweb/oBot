@@ -1,5 +1,5 @@
 // ==UserScript==
-// @version 7.8.4
+// @version 7.8.7
 // @icon https://js.obot.it/images/logo.png
 // @name oBot
 // @namespace https://obot.it
