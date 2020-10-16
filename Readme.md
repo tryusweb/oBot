@@ -1,4 +1,4 @@
-Version: 7.8.4
+Version: 7.8.7
 
 Link Download: https://js.obot.it/obot.user.js
 
@@ -28,4 +28,4 @@ oBot is a bot composed of various modules, which helps you keep an eye on your a
 •	Advanced statistics; 
 •	rescue attacks and expedition. 
 
-User manual and FAQ are present on the site. In case of anomalies, errors in the documentation or proposals on new features, write to us. Info@tryus.it The bot is constantly developing on the requests that come to us.
+User manual and FAQ are present on the site. In case of anomalies, errors in the documentation or proposals on new features, write to us. Info@obot.it The bot is constantly developing on the requests that come to us.
